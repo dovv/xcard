@@ -57,7 +57,7 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
   gem 'pry-rails', '~> 0.3.4'
-  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+  gem 'dotenv-rails', '~> 3.2'
 end
 
 group :development do
