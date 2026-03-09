@@ -1,6 +1,7 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 // import "@hotwired/turbo-rails"
 // import "controllers"
+import flatpickr from "flatpickr";
 import * as bootstrap from "bootstrap"
-import "~/js/admin/main";
-import "./scss/admin/style.scss"
+import "@admin/js/main";
+import "@admin/scss/styles.scss";

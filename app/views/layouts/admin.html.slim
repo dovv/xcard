@@ -1,5 +1,14 @@
 doctype html
-html
+html lang="en" dir="ltr"
+  data-nav-layout="vertical"
+  data-theme-mode="light"
+  data-header-styles="transparent"
+  data-width="fullwidth"
+  data-menu-styles="transparent"
+  data-page-style="flat"
+  data-vertical-style="doublemenu"
+  data-toggled="close"
+
   head
     title = content_for(:title) || "Sanze Web"
 
@@ -13,16 +22,20 @@ html
 
     = yield :head
 
-    / PWA manifest
-    / = tag.link rel="manifest", href: pwa_manifest_path(format: :json)
-
     link rel="icon" href="/icon.png" type="image/png"
     link rel="icon" href="/icon.svg" type="image/svg+xml"
     link rel="apple-touch-icon" href="/icon.png"
 
-    = vite_javascript_tag 'admin'
-    / = stylesheet_link_tag "admin", "data-turbo-track": "reload"
-    / = javascript_importmap_tags
+    = vite_client_tag
+    = vite_javascript_tag "admin"
 
   body
-    = yield
+    .progress-top-bar
+    #loader
+      img[src="../assets/images/media/loader.svg" alt=""]
+    div.page
+      = render "layouts/partials/admin/header"
+      .main-content.app-content
+        .container-fluid.page-container.main-body-container
+          = yield
+      = render "layouts/partials/admin/footer"

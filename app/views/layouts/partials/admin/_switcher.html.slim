@@ -1,0 +1,351 @@
+/ Start Switcher
+#switcher-canvas.offcanvas.offcanvas-end[tabindex="-1" aria-labelledby="offcanvasRightLabel"]
+  .offcanvas-header.border-bottom.d-block.p-0
+    .d-flex.align-items-center.justify-content-between.p-3
+      h5#offcanvasRightLabel.offcanvas-title.text-default
+        | Switcher
+      button.btn-close[type="button" data-bs-dismiss="offcanvas" aria-label="Close"]
+    nav.border-top.border-block-start-dashed
+      #switcher-main-tab.nav.nav-tabs.nav-justified[role="tablist"]
+        button#switcher-home-tab.nav-link.active[data-bs-toggle="tab" data-bs-target="#switcher-home" type="button" role="tab" aria-controls="switcher-home" aria-selected="true"]
+          | Theme Styles
+        button#switcher-profile-tab.nav-link[data-bs-toggle="tab" data-bs-target="#switcher-profile" type="button" role="tab" aria-controls="switcher-profile" aria-selected="false"]
+          | Theme Colors
+  .offcanvas-body
+    #nav-tabContent.tab-content
+      #switcher-home.tab-pane.fade.show.active.border-0[role="tabpanel" aria-labelledby="switcher-home-tab" tabindex="0"]
+        div
+          p.switcher-style-head
+            | Theme Color Mode:
+          .row.switcher-style.gx-0
+            .col-4
+              .form-check.switch-select
+                label.form-check-label[for="switcher-light-theme"]
+                  |  Light
+                input#switcher-light-theme.form-check-input[type="radio" name="theme-style"]
+
+              .col-4
+                .form-check.switch-select
+                  label.form-check-label[for="switcher-dark-theme"]
+                    |  Dark
+                  input#switcher-dark-theme.form-check-input[type="radio" name="theme-style"]
+
+            div
+              p.switcher-style-head
+                | Directions:
+              .row.switcher-style.gx-0
+                .col-4
+                  .form-check.switch-select
+                    label.form-check-label[for="switcher-ltr"]
+                      |  LTR
+                    input#switcher-ltr.form-check-input[type="radio" name="direction"]
+
+                  .col-4
+                    .form-check.switch-select
+                      label.form-check-label[for="switcher-rtl"]
+                        |  RTL
+                      input#switcher-rtl.form-check-input[type="radio" name="direction"]
+
+                div
+                  p.switcher-style-head
+                    | Navigation Styles:
+                  .row.switcher-style.gx-0
+                    .col-4
+                      .form-check.switch-select
+                        label.form-check-label[for="switcher-vertical"]
+                          |  Vertical
+                        input#switcher-vertical.form-check-input[type="radio" name="navigation-style"]
+
+                      .col-4
+                        .form-check.switch-select
+                          label.form-check-label[for="switcher-horizontal"]
+                            |  Horizontal
+                          input#switcher-horizontal.form-check-input[type="radio" name="navigation-style"]
+
+                    .navigation-menu-styles
+                      p.switcher-style-head
+                        | Vertical Horizontal Menu Styles:
+                      .row.switcher-style.gx-0.pb-2.gy-2
+                        .col-4
+                          .form-check.switch-select
+                            label.form-check-label[for="switcher-menu-click"]
+                              |  Menu Click
+                            input#switcher-menu-click.form-check-input[type="radio" name="navigation-menu-styles"]
+
+                          .col-4
+                            .form-check.switch-select
+                              label.form-check-label[for="switcher-menu-hover"]
+                                |  Menu Hover
+                              input#switcher-menu-hover.form-check-input[type="radio" name="navigation-menu-styles"]
+
+                            .col-4
+                              .form-check.switch-select
+                                label.form-check-label[for="switcher-icon-click"]
+                                  |  Icon Click
+                                input#switcher-icon-click.form-check-input[type="radio" name="navigation-menu-styles"]
+
+                              .col-4
+                                .form-check.switch-select
+                                  label.form-check-label[for="switcher-icon-hover"]
+                                    |  Icon Hover
+                                  input#switcher-icon-hover.form-check-input[type="radio" name="navigation-menu-styles"]
+
+                            .sidemenu-layout-styles
+                              p.switcher-style-head
+                                | Sidemenu Layout Styles:
+                              .row.switcher-style.gx-0.pb-2.gy-2
+                                .col-sm-6
+                                  .form-check.switch-select
+                                    label.form-check-label[for="switcher-default-menu"]
+                                      |  Default Menu
+                                    input#switcher-default-menu.form-check-input[type="radio" name="sidemenu-layout-styles"]
+
+                                  .col-sm-6
+                                    .form-check.switch-select
+                                      label.form-check-label[for="switcher-closed-menu"]
+                                        |  Closed Menu
+                                      input#switcher-closed-menu.form-check-input[type="radio" name="sidemenu-layout-styles"]
+
+                                    .col-sm-6
+                                      .form-check.switch-select
+                                        label.form-check-label[for="switcher-icontext-menu"]
+                                          |  Icon Text
+                                        input#switcher-icontext-menu.form-check-input[type="radio" name="sidemenu-layout-styles"]
+
+                                      .col-sm-6
+                                        .form-check.switch-select
+                                          label.form-check-label[for="switcher-icon-overlay"]
+                                            |  Icon Overlay
+                                          input#switcher-icon-overlay.form-check-input[type="radio" name="sidemenu-layout-styles"]
+
+                                        .col-sm-6
+                                          .form-check.switch-select
+                                            label.form-check-label[for="switcher-detached"]
+                                              |  Detached
+                                            input#switcher-detached.form-check-input[type="radio" name="sidemenu-layout-styles"]
+
+                                          .col-sm-6
+                                            .form-check.switch-select
+                                              label.form-check-label[for="switcher-double-menu"]
+                                                |  Double Menu
+                                              input#switcher-double-menu.form-check-input[type="radio" name="sidemenu-layout-styles"]
+
+                                        div
+                                          p.switcher-style-head
+                                            | Page Styles:
+                                          .row.switcher-style.gx-0
+                                            .col-xl-3.col-6
+                                              .form-check.switch-select
+                                                label.form-check-label[for="switcher-regular"]
+                                                  |  Regular
+                                                input#switcher-regular.form-check-input[type="radio" name="page-styles"]
+
+                                              .col-xl-3.col-6
+                                                .form-check.switch-select
+                                                  label.form-check-label[for="switcher-classic"]
+                                                    |  Classic
+                                                  input#switcher-classic.form-check-input[type="radio" name="page-styles"]
+
+                                                .col-xl-3.col-6
+                                                  .form-check.switch-select
+                                                    label.form-check-label[for="switcher-modern"]
+                                                      |  Modern
+                                                    input#switcher-modern.form-check-input[type="radio" name="page-styles"]
+
+                                                  .col-xl-3.col-6
+                                                    .form-check.switch-select
+                                                      label.form-check-label[for="switcher-flat"]
+                                                        |  Flat
+                                                      input#switcher-flat.form-check-input[type="radio" name="page-styles"]
+
+                                                div
+                                                  p.switcher-style-head
+                                                    | Layout Width Styles:
+                                                  .row.switcher-style.gx-0
+                                                    .col-4
+                                                      .form-check.switch-select
+                                                        label.form-check-label[for="switcher-default-width"]
+                                                          |  Default
+                                                        input#switcher-default-width.form-check-input[type="radio" name="layout-width"]
+
+                                                      .col-5
+                                                        .form-check.switch-select
+                                                          label.form-check-label[for="switcher-full-width"]
+                                                            |  Full Width
+                                                          input#switcher-full-width.form-check-input[type="radio" name="layout-width"]
+
+                                                        .col-3
+                                                          .form-check.switch-select
+                                                            label.form-check-label[for="switcher-boxed"]
+                                                              |  Boxed
+                                                            input#switcher-boxed.form-check-input[type="radio" name="layout-width"]
+
+                                                      div
+                                                        p.switcher-style-head
+                                                          | Menu Positions:
+                                                        .row.switcher-style.gx-0
+                                                          .col-4
+                                                            .form-check.switch-select
+                                                              label.form-check-label[for="switcher-menu-fixed"]
+                                                                |  Fixed
+                                                              input#switcher-menu-fixed.form-check-input[type="radio" name="menu-positions"]
+
+                                                            .col-4
+                                                              .form-check.switch-select
+                                                                label.form-check-label[for="switcher-menu-scroll"]
+                                                                  |  Scrollable
+                                                                input#switcher-menu-scroll.form-check-input[type="radio" name="menu-positions"]
+
+                                                          div
+                                                            p.switcher-style-head
+                                                              | Header Positions:
+                                                            .row.switcher-style.gx-0
+                                                              .col-4
+                                                                .form-check.switch-select
+                                                                  label.form-check-label[for="switcher-header-fixed"]
+                                                                    |  Fixed
+                                                                  input#switcher-header-fixed.form-check-input[type="radio" name="header-positions"]
+
+                                                                .col-4
+                                                                  .form-check.switch-select
+                                                                    label.form-check-label[for="switcher-header-scroll"]
+                                                                      |  Scrollable
+                                                                    input#switcher-header-scroll.form-check-input[type="radio" name="header-positions"]
+
+                                                              div
+                                                                p.switcher-style-head
+                                                                  | Loader:
+                                                                .row.switcher-style.gx-0
+                                                                  .col-4
+                                                                    .form-check.switch-select
+                                                                      label.form-check-label[for="switcher-loader-enable"]
+                                                                        |  Enable
+                                                                      input#switcher-loader-enable.form-check-input[type="radio" name="page-loader"]
+
+                                                                    .col-4
+                                                                      .form-check.switch-select
+                                                                        label.form-check-label[for="switcher-loader-disable"]
+                                                                          |  Disable
+                                                                        input#switcher-loader-disable.form-check-input[type="radio" name="page-loader"]
+
+                                                                #switcher-profile.tab-pane.fade.border-0[role="tabpanel" aria-labelledby="switcher-profile-tab" tabindex="0"]
+                                                                  div
+                                                                    .theme-colors
+                                                                      p.switcher-style-head
+                                                                        | Menu Colors:
+                                                                      .d-flex.switcher-style.pb-2
+                                                                        .form-check.switch-select.me-3
+                                                                          input#switcher-menu-light.form-check-input.color-input.color-white[data-bs-toggle="tooltip" data-bs-placement="top" title="Light Menu" type="radio" name="menu-colors"]
+
+                                                                          .form-check.switch-select.me-3
+                                                                            input#switcher-menu-dark.form-check-input.color-input.color-dark[data-bs-toggle="tooltip" data-bs-placement="top" title="Dark Menu" type="radio" name="menu-colors"]
+
+                                                                            .form-check.switch-select.me-3
+                                                                              input#switcher-menu-primary.form-check-input.color-input.color-primary[data-bs-toggle="tooltip" data-bs-placement="top" title="Color Menu" type="radio" name="menu-colors"]
+
+                                                                              .form-check.switch-select.me-3
+                                                                                input#switcher-menu-gradient.form-check-input.color-input.color-gradient[data-bs-toggle="tooltip" data-bs-placement="top" title="Gradient Menu" type="radio" name="menu-colors"]
+
+                                                                                .form-check.switch-select.me-3
+                                                                                  input#switcher-menu-transparent.form-check-input.color-input.color-transparent[data-bs-toggle="tooltip" data-bs-placement="top" title="Transparent Menu" type="radio" name="menu-colors"]
+
+                                                                                .px-4.pb-3.text-muted.fs-11
+                                                                                  | Note:If you want to change color Menu dynamically change from below Theme Primary color picker
+                                                                              .theme-colors
+                                                                                p.switcher-style-head
+                                                                                  | Header Colors:
+                                                                                .d-flex.switcher-style.pb-2
+                                                                                  .form-check.switch-select.me-3
+                                                                                    input#switcher-header-light.form-check-input.color-input.color-white[data-bs-toggle="tooltip" data-bs-placement="top" title="Light Header" type="radio" name="header-colors"]
+
+                                                                                    .form-check.switch-select.me-3
+                                                                                      input#switcher-header-dark.form-check-input.color-input.color-dark[data-bs-toggle="tooltip" data-bs-placement="top" title="Dark Header" type="radio" name="header-colors"]
+
+                                                                                      .form-check.switch-select.me-3
+                                                                                        input#switcher-header-primary.form-check-input.color-input.color-primary[data-bs-toggle="tooltip" data-bs-placement="top" title="Color Header" type="radio" name="header-colors"]
+
+                                                                                        .form-check.switch-select.me-3
+                                                                                          input#switcher-header-gradient.form-check-input.color-input.color-gradient[data-bs-toggle="tooltip" data-bs-placement="top" title="Gradient Header" type="radio" name="header-colors"]
+
+                                                                                          .form-check.switch-select.me-3
+                                                                                            input#switcher-header-transparent.form-check-input.color-input.color-transparent[data-bs-toggle="tooltip" data-bs-placement="top" title="Transparent Header" type="radio" name="header-colors"]
+
+                                                                                          .px-4.pb-3.text-muted.fs-11
+                                                                                            | Note:If you want to change color Header dynamically change from below Theme Primary color picker
+                                                                                        .theme-colors
+                                                                                          p.switcher-style-head
+                                                                                            | Theme Primary:
+                                                                                          .d-flex.flex-wrap.align-items-center.switcher-style
+                                                                                            .form-check.switch-select.me-3
+                                                                                              input#switcher-primary.form-check-input.color-input.color-primary-1[type="radio" name="theme-primary"]
+
+                                                                                              .form-check.switch-select.me-3
+                                                                                                input#switcher-primary1.form-check-input.color-input.color-primary-2[type="radio" name="theme-primary"]
+
+                                                                                                .form-check.switch-select.me-3
+                                                                                                  input#switcher-primary2.form-check-input.color-input.color-primary-3[type="radio" name="theme-primary"]
+
+                                                                                                  .form-check.switch-select.me-3
+                                                                                                    input#switcher-primary3.form-check-input.color-input.color-primary-4[type="radio" name="theme-primary"]
+
+                                                                                                    .form-check.switch-select.me-3
+                                                                                                      input#switcher-primary4.form-check-input.color-input.color-primary-5[type="radio" name="theme-primary"]
+
+                                                                                                      .form-check.switch-select.ps-0.mt-1.color-primary-light
+                                                                                                        .theme-container-primary
+                                                                                                        .pickr-container-primary[onchange="updateChartColor(this.value)"]
+                                                                                                  .theme-colors
+                                                                                                    p.switcher-style-head
+                                                                                                      | Theme Background:
+                                                                                                    .d-flex.flex-wrap.align-items-center.switcher-style
+                                                                                                      .form-check.switch-select.me-3
+                                                                                                        input#switcher-background.form-check-input.color-input.color-bg-1[type="radio" name="theme-background"]
+
+                                                                                                        .form-check.switch-select.me-3
+                                                                                                          input#switcher-background1.form-check-input.color-input.color-bg-2[type="radio" name="theme-background"]
+
+                                                                                                          .form-check.switch-select.me-3
+                                                                                                            input#switcher-background2.form-check-input.color-input.color-bg-3[type="radio" name="theme-background"]
+
+                                                                                                            .form-check.switch-select.me-3
+                                                                                                              input#switcher-background3.form-check-input.color-input.color-bg-4[type="radio" name="theme-background"]
+
+                                                                                                              .form-check.switch-select.me-3
+                                                                                                                input#switcher-background4.form-check-input.color-input.color-bg-5[type="radio" name="theme-background"]
+
+                                                                                                                .form-check.switch-select.ps-0.mt-1.tooltip-static-demo.color-bg-transparent
+                                                                                                                  .theme-container-background
+                                                                                                                  .pickr-container-background
+                                                                                                            .menu-image.mb-3
+                                                                                                              p.switcher-style-head
+                                                                                                                | Menu With Background Image:
+                                                                                                              .d-flex.flex-wrap.align-items-center.switcher-style
+                                                                                                                .form-check.switch-select.menu-img-select.m-2
+                                                                                                                  input#switcher-bg-img.form-check-input.bgimage-input.bg-img1[type="radio" name="menu-background"]
+                                                                                                                    .bg-img-container
+                                                                                                                      img[src="../assets/images/menu-bg-images/bg-img1.jpg" alt=""]
+
+                                                                                                                    .form-check.switch-select.menu-img-select.m-2
+                                                                                                                      input#switcher-bg-img1.form-check-input.bgimage-input.bg-img2[type="radio" name="menu-background"]
+                                                                                                                        .bg-img-container
+                                                                                                                          img[src="../assets/images/menu-bg-images/bg-img2.jpg" alt=""]
+
+                                                                                                                        .form-check.switch-select.menu-img-select.m-2
+                                                                                                                          input#switcher-bg-img2.form-check-input.bgimage-input.bg-img3[type="radio" name="menu-background"]
+                                                                                                                            .bg-img-container
+                                                                                                                              img[src="../assets/images/menu-bg-images/bg-img3.jpg" alt=""]
+
+                                                                                                                            .form-check.switch-select.menu-img-select.m-2
+                                                                                                                              input#switcher-bg-img3.form-check-input.bgimage-input.bg-img4[type="radio" name="menu-background"]
+                                                                                                                                .bg-img-container
+                                                                                                                                  img[src="../assets/images/menu-bg-images/bg-img4.jpg" alt=""]
+
+                                                                                                                                .form-check.switch-select.menu-img-select.m-2
+                                                                                                                                  input#switcher-bg-img4.form-check-input.bgimage-input.bg-img5[type="radio" name="menu-background"]
+                                                                                                                                    .bg-img-container
+                                                                                                                                      img[src="../assets/images/menu-bg-images/bg-img5.jpg" alt=""]
+
+                                                                                                                            .d-block.canvas-footer.flex-wrap
+                                                                                                                              a#reset-all.btn.btn-danger.m-1.w-100[href="javascript:void(0);"]
+                                                                                                                                | Reset
+                                                                                                                      / End Switcher
